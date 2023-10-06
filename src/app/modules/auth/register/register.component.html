@@ -1,0 +1,329 @@
+<html lang="en" class="light">
+  <head> </head>
+  <body class="login">
+    <div class="container sm:px-10">
+      <div class="block xl:grid grid-cols-2 gap-4">
+        <div class="hidden xl:flex flex-col min-h-screen">
+          <a href="" class="-intro-x flex items-center pt-5">
+            <img
+              alt="Midone - HTML Admin Template"
+              class="w-6"
+              src="../../../../assets/images/logo.svg"
+            />
+            <span class="text-white text-lg ml-3"> Med Market</span>
+          </a>
+          <div class="my-auto">
+            <img
+              alt="Midone - HTML Admin Template"
+              class="-intro-x w-1/2 -mt-16"
+              src="../../../../assets/images/illustration.svg"
+            />
+            <div
+              class="-intro-x text-white font-medium text-4xl leading-tight mt-10"
+            >
+              A few more clicks to
+              <br />
+              sign up to your account.
+            </div>
+            <div
+              class="-intro-x mt-5 text-lg text-white text-opacity-70 dark:text-slate-400"
+            >
+              Med Market , the best ecommerce app to use
+            </div>
+          </div>
+        </div>
+        <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
+          <div
+            class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto"
+          >
+            <h2
+              class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left"
+            >
+              Sign Up
+            </h2>
+            <div
+              class="intro-x mt-2 text-slate-400 dark:text-slate-400 xl:hidden text-center"
+            >
+              A few more clicks to sign in to your account. Manage all your
+              e-commerce accounts in one place
+            </div>
+            <div class="intro-x mt-8" [formGroup]="RegisterForm">
+              <input
+                type="text"
+                class="intro-x login__input form-control py-3 px-4 block"
+                placeholder="First Name"
+                formControlName="firstName"
+              />
+              <div
+                *ngIf="
+                  RegisterForm.controls['firstName'].invalid &&
+                  (RegisterForm.controls['firstName'].dirty ||
+                    RegisterForm.controls['firstName'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['firstName'].errors?.['required']"
+                  role="alert"
+                >
+                  firstname is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['firstName'].hasError('minlength')
+                  "
+                  role="alert"
+                >
+                  firstname must be at least 4 caracters
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['firstName'].hasError('maxlength')
+                  "
+                  role="alert"
+                >
+                  firstname must be at maximum 10 caracters
+                </div>
+              </div>
+              <input
+                type="text"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="Last Name"
+                formControlName="lastName"
+              />
+
+              <div
+                *ngIf="
+                  RegisterForm.controls['lastName'].invalid &&
+                  (RegisterForm.controls['lastName'].dirty ||
+                    RegisterForm.controls['lastName'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['lastName'].errors?.['required']"
+                  role="alert"
+                >
+                  lastname is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['lastName'].hasError('minlength')
+                  "
+                  role="alert"
+                >
+                  lastname must be at least 4 caracters
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['lastName'].hasError('maxlength')
+                  "
+                  role="alert"
+                >
+                  lastname must be at maximum 10 caracters
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="Email"
+                formControlName="email"
+              />
+              <div
+                *ngIf="
+                  RegisterForm.controls['email'].invalid &&
+                  (RegisterForm.controls['email'].dirty ||
+                    RegisterForm.controls['email'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['email'].errors?.['required']"
+                  role="alert"
+                >
+                  email is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['email'].errors?.['pattern']"
+                  role="alert"
+                >
+                  Please Enter a Valid Email : "-----------@gmail.com"
+                </div>
+              </div>
+              <input
+                type="text"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="phone"
+                formControlName="phone"
+              />
+
+              <div
+                *ngIf="
+                  RegisterForm.controls['phone'].invalid &&
+                  (RegisterForm.controls['phone'].dirty ||
+                    RegisterForm.controls['phone'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['phone'].errors?.['required']"
+                  role="alert"
+                >
+                  phone is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['phone'].errors?.['pattern']"
+                  role="alert"
+                >
+                  phone must be composef of 8 digits : exemple :50341237
+                </div>
+              </div>
+              <input
+                type="text"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="address"
+                formControlName="address"
+              />
+              <div
+                *ngIf="
+                  RegisterForm.controls['address'].invalid &&
+                  (RegisterForm.controls['address'].dirty ||
+                    RegisterForm.controls['address'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['address'].errors?.['required']"
+                  role="alert"
+                >
+                  address is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['address'].errors?.['pattern']"
+                  role="alert"
+                >
+                  you have to give the addres in this type :
+                  nahj-mo3tamdia-wilaya
+                </div>
+              </div>
+              <input
+                type="password"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="Password"
+                formControlName="password"
+              />
+
+              <div
+                *ngIf="
+                  RegisterForm.controls['password'].invalid &&
+                  (RegisterForm.controls['password'].dirty ||
+                    RegisterForm.controls['password'].touched)
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['password'].errors?.['required']"
+                  role="alert"
+                >
+                  password is required
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['password'].hasError('minlength')
+                  "
+                  role="alert"
+                >
+                  password must be at least 8 caracters
+                </div>
+                <div
+                  class="alertDanger"
+                  *ngIf="
+                    RegisterForm.controls['password'].hasError('maxlength')
+                  "
+                  role="alert"
+                >
+                  password must be at maximum 16 caracters
+                </div>
+                <div
+                  *ngIf="
+                    RegisterForm.get('password')?.hasError(
+                      'passwordStrength'
+                    ) &&
+                    !RegisterForm.controls['password'].hasError('maxlength') &&
+                    !RegisterForm.controls['password'].hasError('minlength')&&
+                    !RegisterForm.controls['password'].errors?.['required']
+                  "
+                  class="alert alert-danger"
+                >
+                  Password must have at least one uppercase letter, one
+                  lowercase letter, one symbol, and one number.
+                </div>
+              </div>
+
+              <input
+                (ngModelChange)="ValidateConfirmedPassword()"
+                type="password"
+                class="intro-x login__input form-control py-3 px-4 block mt-4"
+                placeholder="Password Confirmation "
+                formControlName="confirmPassword"
+              />
+              <div
+                *ngIf="
+                  RegisterForm.controls['confirmPassword'].dirty ||
+                  RegisterForm.controls['confirmPassword'].touched
+                "
+                class="alert alert-danger"
+              >
+                <div
+                  class="alertDanger"
+                  *ngIf="RegisterForm.controls['confirmPassword'].errors?.['required']"
+                  role="alert"
+                >
+                  you have to confirm password
+                </div>
+                <div
+                  class="alertDanger"
+                  role="alert"
+                  *ngIf="handelConfirmedPassword && !RegisterForm.controls['confirmPassword'].errors?.['required']"
+                >
+                  password do not matches
+                </div>
+              </div>
+            </div>
+
+            <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
+              <button
+                (click)="submit()"
+                [disabled]="!RegisterForm.valid"
+                class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top"
+              >
+                Register
+              </button>
+              <button
+                routerLink="/login"
+                class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top"
+              >
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* Styles for the product card container */
+.product-card {
+  width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease; /* Add a transition for the transform property */
+  align-items: center;
+}
+.product-card:hover {
+  transform: scale(1.05); /* Increase the size slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Styles for the product image */
+.product-image {
+  max-width: 100%;
+  height: 200px;
+  margin-bottom: 12px;
+}
+.product-info {
+  flex: 1; /* Allow the description to expand vertically */
+}
+
+/* Styles for the product title */
+.product-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+/* Styles for the product description */
+.product-description {
+  font-size: 0.875rem;
+  color: #555;
+  height: 20px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Styles for the product price */
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Styles for the "Add to Cart" button */
+.add-to-cart-button {
+  height: 50px;
+  background-color: teal;
+  margin: auto;
+  color: #fff;
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: green;
+}
+.card-footer {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+.quantity {
+  padding: 8px 16px;
+}
+
+.form-control {
+  width: 100px;
+  border-radius: 10px solid white;
+}
+
+.add-to-cart-button:hover {
+  background-color: green;
+}
+
+.form-control {
+  width: 100px;
+  border-radius: 10px solid white;
+}
+.add-to-cart-button2 {
+  height: 50px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: green;
+}
+
+.add-to-cart-button2:hover {
+  background-color: blue;
+}
